@@ -48,10 +48,18 @@
             android:id="@+id/action_registrationFragment_to_homeFragment"
             app:destination="@id/homeFragment"
             app:enterAnim="@anim/slide_in_bottm" />
+        <action
+            android:id="@+id/action_registrationFragment_to_scanQRActivity"
+            app:destination="@id/scanQRActivity" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.reperksproto2.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <activity
+        android:id="@+id/scanQRActivity"
+        android:name="com.example.reperksproto2.ScanQRActivity"
+        android:label="activity_scan"
+        tools:layout="@layout/activity_scan" />
 </navigation>
