@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    app:layoutDescription="@xml/fragment_registration_scene"
+    tools:context=".RegistrationFragment">
+
+    <ImageButton
+        android:id="@+id/back_buttonSp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/frame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAccessibility="no" />
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/sign_up_"
+        android:layout_width="93dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="134dp"
+        android:layout_marginEnd="232dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_up"
+        android:textAppearance="@style/sign_up_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+
+    <TextView
+        android:id="@+id/firstnamesp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="First Name"
+        android:textColor="@color/off_black"
+        app:layout_constraintBottom_toTopOf="@+id/firstnamesp_box"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstnamesp_box"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        app:boxStrokeWidth="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_2"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--&#45;&#45;-->
+    <TextView
+        android:id="@+id/secondname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Last Name"
+        android:textColor="@color/off_black"
+        app:layout_constraintBottom_toTopOf="@+id/secondname_box"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/secondname_box"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:boxStrokeWidth="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstnamesp_box">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_2"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45-->
+    <TextView
+        android:id="@+id/phonesp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Phone Number"
+        android:textColor="@color/off_black"
+        app:layout_constraintBottom_toTopOf="@+id/phonesp_box"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phonesp_box"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:boxStrokeWidth="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondname_box">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_2"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--===============================-->
+    <TextView
+        android:id="@+id/passwordsp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="56dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Password"
+        android:textColor="@color/off_black"
+        app:layout_constraintBottom_toTopOf="@+id/passwordsp_rect"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordsp_rect"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:boxStrokeWidth="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phonesp_box"
+        app:passwordToggleEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/rectangle_2"
+            android:password="true"
+            tools:ignore="Deprecated,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--        ============-->
+    <TextView
+        android:id="@+id/already_have_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/Already_have_an_account_Login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordsp_rect" />
+
+    <!--    ==================================-->
+
+    <Button
+        android:id="@+id/Register_btn"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_gravity="start"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ripple_button"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/action_Register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordsp_rect"
+        app:layout_constraintVertical_bias="0.62" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

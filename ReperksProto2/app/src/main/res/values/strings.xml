@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Reperks Proto2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_Register">Register</string>
+    <string name="welcomeTorePerks">Welcome to <font color='#49854A'>\n re</font>Perks</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? <font color='#49854A'>Register.</font></string>
+    <string name="Already_have_an_account_Login">Already have an account? <font color='#49854A'>Login.</font></string>
+    <string name="sign_up">Sign <font color='#49854A'>Up</font></string>
+    <string name="login">Login</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+</resources>
