@@ -44,7 +44,6 @@ public class HomeFragment extends Fragment {
         });
 
         return view;
-
     }
 
     private void scanCode() {
