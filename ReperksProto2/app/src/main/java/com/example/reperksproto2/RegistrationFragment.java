@@ -1,5 +1,6 @@
 package com.example.reperksproto2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -33,7 +34,9 @@ Button register_button;
        register_button.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+//               Navigation.findNavController(v).navigate(R.id.action_registrationFragment_to_homeFragment);
                Navigation.findNavController(v).navigate(R.id.action_registrationFragment_to_homeFragment);
+
            }
        });
 
