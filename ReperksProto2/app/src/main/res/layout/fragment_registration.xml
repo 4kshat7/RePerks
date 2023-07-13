@@ -172,6 +172,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
         android:fontFamily="@font/poppins"
         android:text="@string/Already_have_an_account_Login"
         app:layout_constraintStart_toStartOf="parent"

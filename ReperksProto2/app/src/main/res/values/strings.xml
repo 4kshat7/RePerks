@@ -8,7 +8,7 @@
     <string name="Already_have_an_account_Login">Already have an account? <font color='#49854A'>Login.</font></string>
     <string name="sign_up">Sign <font color='#49854A'>Up</font></string>
     <string name="login">Login</string>
-    <string name="phone_number">Phone Number</string>
+    <string name="Email">Email</string>
     <string name="password">Password</string>
 
     <string name="Hi_Akshat"> Hi,<font color='49854A'>Akshat!</font></string>

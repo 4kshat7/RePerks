@@ -41,12 +41,12 @@
 
     <TextView
         android:id="@+id/phone_text"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="20dp"
         android:layout_marginStart="56dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/phone_number"
+        android:text="@string/Email"
         android:textColor="@color/off_black"
         app:layout_constraintBottom_toTopOf="@+id/phone_box"
         app:layout_constraintStart_toStartOf="parent" />
@@ -106,11 +106,13 @@
 
     <TextView
         android:id="@+id/don_t_have_"
-        android:layout_width="wrap_content"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:fontFamily="@font/poppins"
         android:elevation="1dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
         android:text="@string/don_t_have_an_account_register"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_rect" />
