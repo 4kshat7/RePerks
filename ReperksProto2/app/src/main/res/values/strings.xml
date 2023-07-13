@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Reperks Proto2</string>
+    <string name="app_name">rePerks</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_sign_in">Login</string>
     <string name="action_Register">Register</string>

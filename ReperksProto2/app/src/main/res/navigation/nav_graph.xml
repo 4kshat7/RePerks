@@ -26,14 +26,13 @@
             app:destination="@id/registrationFragment"
             app:enterAnim="@anim/from_right" />
         <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment"
-            app:enterAnim="@anim/slide_in_bottm" />
-        <action
             android:id="@+id/action_loginFragment_to_splashFragment"
             app:destination="@id/splashFragment"
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -48,18 +47,14 @@
             android:id="@+id/action_registrationFragment_to_homeFragment"
             app:destination="@id/homeFragment"
             app:enterAnim="@anim/slide_in_bottm" />
-        <action
-            android:id="@+id/action_registrationFragment_to_scanQRActivity"
-            app:destination="@id/scanQRActivity" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.reperksproto2.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <activity
-        android:id="@+id/scanQRActivity"
-        android:name="com.example.reperksproto2.ScanQRActivity"
-        android:label="activity_scan"
-        tools:layout="@layout/activity_scan" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
 </navigation>

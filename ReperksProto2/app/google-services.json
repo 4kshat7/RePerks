@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "86405614127",
+    "project_id": "qrbins",
+    "storage_bucket": "qrbins.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86405614127:android:60bfb0fe033cecf7ec14da",
+        "android_client_info": {
+          "package_name": "com.example.reperksproto2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86405614127-krpcgdj2a41ic3unep1dj8pado5s1mcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhJhJcTLbxuwYhetu9fd4s92TQ_Zr3PZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86405614127-krpcgdj2a41ic3unep1dj8pado5s1mcl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
