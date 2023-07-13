@@ -24,6 +24,29 @@
             android:layout_marginTop="114dp"
             android:alpha="0.1"
             android:translationY="-100dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/progressBar"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:layout_height="38dp"
+            android:layout_width="43dp"
+            android:id="@+id/progressBar2"
+            motion:layout_constraintBottom_toTopOf="@+id/phone_box"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="32dp" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintLeft_toLeftOf="p"
+            motion:layout_constraintBaseline_toTopOf="@id/phone_box"
+            motion:layout_editor_absoluteY="181dp"
+            android:id="@+id/progressBar1"
+            motion:layout_constraintBottom_toTopOf="@+id/phone_box" />
 
     </ConstraintSet>
 
@@ -50,5 +73,18 @@
             android:scaleX="1"
             android:alpha="1"
             android:scaleY="1" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/progressBar"
+            motion:layout_editor_absoluteX="64dp"
+            motion:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_editor_absoluteX="64dp" />
     </ConstraintSet>
 </MotionScene>

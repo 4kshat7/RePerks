@@ -57,9 +57,4 @@
             android:id="@+id/action_homeFragment_to_splashFragment"
             app:destination="@id/splashFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/testFragment"
-        android:name="com.example.reperksproto2.testFragment"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
 </navigation>

@@ -10,14 +10,14 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/Hi_txt"
+        android:id="@+id/greeting_txt"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginTop="35dp"
         android:contentDescription="@string/background"
         android:fontFamily="@font/poppins_bold"
         android:elevation="1dp"
-        android:text="@string/Hi"
+        android:text="hi"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.091"
@@ -54,7 +54,7 @@
         android:text="@string/let_s_contribute_to_our_planet"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Hi_txt"
+        app:layout_constraintTop_toBottomOf="@+id/greeting_txt"
         tools:ignore="TextSizeCheck" />
 
     <androidx.constraintlayout.motion.widget.MotionLayout
