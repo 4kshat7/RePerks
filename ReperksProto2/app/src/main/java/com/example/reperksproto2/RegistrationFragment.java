@@ -32,6 +32,8 @@ Button register_button;
 TextInputEditText editTextEmail , editTextPassword;
 TextView textView;
 FirebaseAuth mAuth;
+
+ProgressBar progressBar1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ FirebaseAuth mAuth;
        editTextPassword = view.findViewById(R.id.pass);
        textView = view.findViewById(R.id.already_have_);
        mAuth = FirebaseAuth.getInstance();
+       progressBar1 = view.findViewById(R.id.progressBar1);
+       progressBar1.setVisibility(View.INVISIBLE);
 
        imgbtn2.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -61,19 +65,22 @@ FirebaseAuth mAuth;
        register_button.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               progressBar1.setVisibility(View.VISIBLE);
                String email,password;
                email = String.valueOf(editTextEmail.getText());
                password = String.valueOf(editTextPassword.getText());
 
                if(TextUtils.isEmpty(email)){
-                   Log.d("WORK!!","EMAIL FIELD IS EMPTY!!!!");
+                   progressBar1.setVisibility(View.INVISIBLE);
+                   Log.d("EMPTY!!","EMAIL FIELD IS EMPTY!!!!");
                    Toast.makeText(getActivity(),"Please Enter Email Address",Toast.LENGTH_SHORT).show();
                    return;
                }
 
                if(TextUtils.isEmpty(password)){
+                   progressBar1.setVisibility(View.INVISIBLE);
                    Toast.makeText(getActivity(),"Please Enter Password",Toast.LENGTH_SHORT).show();
-                   Log.d("WORK!!","PASSWORD FIELD IS EMPTY!!!!");
+                   Log.d("EMPTY!!","PASSWORD FIELD IS EMPTY!!!!");
                    return;
                }
 
@@ -83,6 +90,7 @@ FirebaseAuth mAuth;
                            public void onComplete(@NonNull Task<AuthResult> task) {
                                if (task.isSuccessful()) {
                                    // Sign in success, update UI with the signed-in user's information
+                                   progressBar1.setVisibility(View.INVISIBLE);
                                    Toast.makeText(getActivity(), "Account Created Successfully.",
                                            Toast.LENGTH_SHORT).show();
                                    Navigation.findNavController(v).navigate(R.id.action_registrationFragment_to_loginFragment);

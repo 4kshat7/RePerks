@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ public class LoginFragment extends Fragment {
     TextInputEditText editTextEmail , editTextPassword;
     TextView textView;
     FirebaseAuth mAuth;
+    ProgressBar progressBar2;
 
 
 
@@ -44,10 +46,8 @@ public class LoginFragment extends Fragment {
         editTextPassword = view.findViewById(R.id.pass);
         textView = view.findViewById(R.id.don_t_have_);
         mAuth = FirebaseAuth.getInstance();
-
-
-;
-
+        progressBar2 = view.findViewById(R.id.progressBar2);
+        progressBar2.setVisibility(View.INVISIBLE);
 
         imgbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,17 +66,20 @@ public class LoginFragment extends Fragment {
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar2.setVisibility(View.VISIBLE);
                 String email,password;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
 
                 if(TextUtils.isEmpty(email)){
+                    progressBar2.setVisibility(View.INVISIBLE);
                     Log.d("WORK!!","EMAIL FIELD IS EMPTY!!!!");
                     Toast.makeText(getActivity(),"Please Enter Email",Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if(TextUtils.isEmpty(password)){
+                    progressBar2.setVisibility(View.INVISIBLE);
                     Toast.makeText(getActivity(),"Please Enter Password",Toast.LENGTH_SHORT).show();
                     Log.d("WORK!!","PASSWORD FIELD IS EMPTY!!!!");
                     return;
@@ -88,12 +91,14 @@ public class LoginFragment extends Fragment {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
+                                    progressBar2.setVisibility(View.INVISIBLE);
                                     Log.d("LOGIN WORKK!!", "signInWithEmail:success");
 //                                    FirebaseUser user = mAuth.getCurrentUser();
                                     Log.d("USERs NAME!!", "NAME:");
                                     Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_homeFragment);
                                 } else {
                                     // If sign in fails, display a message to the user.
+                                    progressBar2.setVisibility(View.INVISIBLE);
                                     Log.w("LOGIN NOT WORK!!", "signInWithEmail:failure", task.getException());
                                     Toast.makeText(getActivity(), "Authentication failed, Enter valid email and password",
                                             Toast.LENGTH_SHORT).show();
