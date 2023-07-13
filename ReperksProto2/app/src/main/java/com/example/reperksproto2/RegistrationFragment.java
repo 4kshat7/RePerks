@@ -32,6 +32,7 @@ Button register_button;
 TextInputEditText editTextEmail , editTextPassword;
 TextView textView;
 FirebaseAuth mAuth;
+ProgressBar progressBar;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ FirebaseAuth mAuth;
        editTextPassword = view.findViewById(R.id.pass);
        textView = view.findViewById(R.id.already_have_);
        mAuth = FirebaseAuth.getInstance();
+       progressBar = view.findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);
 
        imgbtn2.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -64,14 +67,16 @@ FirebaseAuth mAuth;
                String email,password;
                email = String.valueOf(editTextEmail.getText());
                password = String.valueOf(editTextPassword.getText());
-
+               progressBar.setVisibility(View.VISIBLE);
                if(TextUtils.isEmpty(email)){
+                   progressBar.setVisibility(View.INVISIBLE);
                    Log.d("WORK!!","EMAIL FIELD IS EMPTY!!!!");
                    Toast.makeText(getActivity(),"Please Enter Email Address",Toast.LENGTH_SHORT).show();
                    return;
                }
 
                if(TextUtils.isEmpty(password)){
+                   progressBar.setVisibility(View.INVISIBLE);
                    Toast.makeText(getActivity(),"Please Enter Password",Toast.LENGTH_SHORT).show();
                    Log.d("WORK!!","PASSWORD FIELD IS EMPTY!!!!");
                    return;
@@ -83,6 +88,7 @@ FirebaseAuth mAuth;
                            public void onComplete(@NonNull Task<AuthResult> task) {
                                if (task.isSuccessful()) {
                                    // Sign in success, update UI with the signed-in user's information
+                                   progressBar.setVisibility(View.VISIBLE);
                                    Toast.makeText(getActivity(), "Account Created Successfully.",
                                            Toast.LENGTH_SHORT).show();
                                    Navigation.findNavController(v).navigate(R.id.action_registrationFragment_to_loginFragment);
