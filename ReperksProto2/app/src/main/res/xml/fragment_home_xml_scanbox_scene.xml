@@ -7,18 +7,18 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="1000">
-       <KeyFrameSet>
-           <KeyAttribute
-               motion:motionTarget="@+id/scan_image"
-               motion:framePosition="0"
-               android:rotation="0" />
-       </KeyFrameSet>
-        <OnSwipe
-            motion:touchAnchorId="@+id/scan_image"
-            motion:dragDirection="dragRight" />
-        <OnSwipe
-            motion:touchAnchorId="@+id/rectangle_6"
-            motion:dragDirection="dragRight" />
+<!--       <KeyFrameSet>-->
+<!--           <KeyAttribute-->
+<!--               motion:motionTarget="@+id/scan_image"-->
+<!--               motion:framePosition="0"-->
+<!--               android:rotation="0" />-->
+<!--       </KeyFrameSet>-->
+<!--        <OnSwipe-->
+<!--            motion:touchAnchorId="@+id/scan_image"-->
+<!--            motion:dragDirection="dragRight" />-->
+<!--        <OnSwipe-->
+<!--            motion:touchAnchorId="@+id/rectangle_6"-->
+<!--            motion:dragDirection="dragRight" />-->
     </Transition>
 
     <ConstraintSet android:id="@+id/start">

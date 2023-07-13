@@ -36,7 +36,6 @@ public class LoginFragment extends Fragment {
     TextInputEditText editTextEmail , editTextPassword;
     TextView textView;
     FirebaseAuth mAuth;
-    ProgressBar progressBar1;
 
 
 
@@ -52,7 +51,7 @@ public class LoginFragment extends Fragment {
         textView = view.findViewById(R.id.don_t_have_);
         mAuth = FirebaseAuth.getInstance();
 
-        progressBar1 = view.findViewById(R.id.progressBar1);
+
 ;
 
 
@@ -73,7 +72,6 @@ public class LoginFragment extends Fragment {
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progressBar1.setVisibility(View.VISIBLE);
                 String email,password;
                 email = String.valueOf(editTextEmail.getText());
                 password = String.valueOf(editTextPassword.getText());
@@ -95,14 +93,12 @@ public class LoginFragment extends Fragment {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    progressBar1.setVisibility(View.GONE);
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d("LOGIN WORKK!!", "signInWithEmail:success");
 //                                    FirebaseUser user = mAuth.getCurrentUser();
                                     Log.d("USERs NAME!!", "NAME:");
                                     Navigation.findNavController(v).navigate(R.id.action_loginFragment_to_homeFragment);
                                 } else {
-                                    progressBar1.setVisibility(View.GONE);
                                     // If sign in fails, display a message to the user.
                                     Log.w("LOGIN NOT WORK!!", "signInWithEmail:failure", task.getException());
                                     Toast.makeText(getActivity(), "Authentication failed, Enter valid email and password",
