@@ -18,10 +18,11 @@
         android:contentDescription="@string/background"
         android:elevation="1dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Hi"
+        android:text="@string/hi_text"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/ScanBOX"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/vector_1"
@@ -320,15 +321,15 @@
             android:layout_height="wrap_content"
             android:elevation="1dp"
             android:fontFamily="@font/poppins_medium"
+            android:maxLines="3"
             android:text="@string/list_of_all_your_previous_waste_deposits"
+            android:textAlignment="center"
             android:textColor="#65644A"
             android:textSize="9sp"
-            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:maxLines="3"
             app:layout_constraintTop_toBottomOf="@+id/history_txt"
-            tools:ignore="SmallSp" />
+            tools:ignore="SmallSp,TextSizeCheck" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

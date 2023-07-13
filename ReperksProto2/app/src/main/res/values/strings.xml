@@ -28,4 +28,9 @@
     <string name="contentd3">TODO</string>
     <string name="contentd4">TODO</string>
     <string name="let_s_contribute_to_our_planet">Let\'s contribute to our planet</string>
+    <string name="pass">Password</string>
+    <string name="email">Email</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="hi_text">Hi</string>
 </resources>

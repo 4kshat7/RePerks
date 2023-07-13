@@ -37,7 +37,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/phone_text"
@@ -49,7 +50,8 @@
         android:text="@string/Email"
         android:textColor="@color/off_black"
         app:layout_constraintBottom_toTopOf="@+id/phone_box"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/phone_box"
@@ -80,7 +82,8 @@
         android:text="@string/password"
         android:textColor="@color/off_black"
         app:layout_constraintBottom_toTopOf="@+id/password_rect"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password_rect"
@@ -109,13 +112,13 @@
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:fontFamily="@font/poppins"
-        android:elevation="1dp"
         android:background="?attr/selectableItemBackground"
-        android:clickable="true"
+        android:elevation="1dp"
+        android:fontFamily="@font/poppins"
         android:text="@string/don_t_have_an_account_register"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_rect" />
+        app:layout_constraintTop_toBottomOf="@+id/password_rect"
+        tools:ignore="TextSizeCheck" />
 
     <Button
         android:id="@+id/login_btn"
@@ -133,7 +136,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_rect"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.33"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

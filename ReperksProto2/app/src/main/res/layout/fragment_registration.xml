@@ -15,10 +15,10 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="42dp"
         android:background="@drawable/frame"
+        android:importantForAccessibility="no"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:importantForAccessibility="no" />
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck" />
+        tools:ignore="TextSizeCheck,TextContrastCheck" />
 
 
     <TextView
@@ -46,7 +46,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginBottom="2dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="First Name"
+        android:text="@string/first_name"
         android:textColor="@color/off_black"
         app:layout_constraintBottom_toTopOf="@+id/firstnamesp_box"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginBottom="2dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Last Name"
+        android:text="@string/last_name"
         android:textColor="@color/off_black"
         app:layout_constraintBottom_toTopOf="@+id/secondname_box"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +109,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginBottom="2dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Email"
+        android:text="@string/email"
         android:textColor="@color/off_black"
         app:layout_constraintBottom_toTopOf="@+id/phonesp_box"
         app:layout_constraintStart_toStartOf="parent"
@@ -140,7 +140,7 @@
         android:layout_height="20dp"
         android:layout_marginStart="56dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Password"
+        android:text="@string/pass"
         android:textColor="@color/off_black"
         app:layout_constraintBottom_toTopOf="@+id/passwordsp_rect"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,7 +173,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:background="?attr/selectableItemBackground"
-        android:clickable="true"
         android:fontFamily="@font/poppins"
         android:text="@string/Already_have_an_account_Login"
         app:layout_constraintStart_toStartOf="parent"
