@@ -13,7 +13,7 @@
         android:id="@+id/greeting_txt"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="52dp"
         android:contentDescription="@string/background"
         android:elevation="1dp"
@@ -29,7 +29,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="25dp"
         android:contentDescription="@string/todo"
         android:scaleType="fitXY"
         android:src="@drawable/vector_1"
@@ -38,10 +38,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rp"
+        app:layout_constraintBottom_toBottomOf="@+id/reward_points"
+        app:layout_constraintEnd_toStartOf="@+id/reward_points" />
+
 
     <!--    scanqr rectangle-->
 
     <!--    rewards rectangle-->
+
+    <TextView
+        android:id="@+id/reward_points"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="264dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/reward_point_str"
+        android:textColor="@color/green_button"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/subtext"
+        app:layout_constraintStart_toEndOf="@+id/greeting_txt"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/subtext"
@@ -102,7 +124,7 @@
         <ImageView
             android:id="@+id/scan_image"
             android:layout_width="153dp"
-            android:layout_height="60dp"
+            android:layout_height="120dp"
             android:background="@drawable/handscan"
             android:contentDescription="@string/todo_1"
             android:elevation="1dp"
@@ -200,16 +222,16 @@
 
     <!--    hi text-->
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/BinSiteBOX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="460dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView4"
@@ -228,12 +250,12 @@
             android:layout_width="142dp"
             android:layout_height="131dp"
             android:background="@drawable/rectangle_9"
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAccessibility="no" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/binsite_txt"
@@ -264,34 +286,32 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/HistoryBOX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="460dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.81"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
             android:id="@+id/rectangle_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_7"
+            android:importantForAccessibility="no"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck"
-            android:importantForAccessibility="no" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/history"
             android:contentDescription="@string/contentd4"

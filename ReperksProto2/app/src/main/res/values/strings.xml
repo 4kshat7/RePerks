@@ -33,4 +33,8 @@
     <string name="last_name">Last Name</string>
     <string name="first_name">First Name</string>
     <string name="hi_text">Hi</string>
+    <string name="rewards_frag">Rewards</string>
+    <string name="reward_point_str">12000</string>
+    <string name="amazon_gift_card">Amazon Gift Card</string>
+    <string name="quine_membership">Quine Membership</string>
 </resources>

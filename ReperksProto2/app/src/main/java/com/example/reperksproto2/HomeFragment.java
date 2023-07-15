@@ -5,6 +5,8 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,8 +43,8 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         imageButton1 = view.findViewById(R.id.rectangle_6);
-        imageButton2 = view.findViewById(R.id.rectangle_7);
-        imageButton3 = view.findViewById(R.id.rectangle_8);
+        imageButton2 = view.findViewById(R.id.rectangle_8);
+        imageButton3 = view.findViewById(R.id.rectangle_7);
         imageButton4 = view.findViewById(R.id.rectangle_9);
 
         textView = view.findViewById(R.id.greeting_txt);
@@ -73,7 +75,12 @@ public class HomeFragment extends Fragment {
                 scanCode();
             }
         });
-
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_rewardFragment);
+            }
+        });
         return view;
     }
 

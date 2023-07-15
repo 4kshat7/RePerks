@@ -48,5 +48,20 @@
         android:id="@+id/homeFragment"
         android:name="com.example.reperksproto2.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_rewardFragment"
+            app:destination="@id/rewardFragment"
+            app:enterAnim="@anim/from_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/rewardFragment"
+        android:name="com.example.reperksproto2.RewardFragment"
+        android:label="fragment_reward"
+        tools:layout="@layout/fragment_reward" >
+        <action
+            android:id="@+id/action_rewardFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/from_left" />
+    </fragment>
 </navigation>
