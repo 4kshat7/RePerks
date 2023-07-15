@@ -68,6 +68,7 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:autoLink="email"
             android:background="@drawable/rectangle_2"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_button"
+    app:layoutDescription="@xml/fragment_home_scene"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -39,14 +40,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView6"
         android:layout_width="25dp"
         android:layout_height="26dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/rp"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="@+id/reward_points"
-        app:layout_constraintEnd_toStartOf="@+id/reward_points"
-        android:importantForAccessibility="no" />
+        app:layout_constraintEnd_toStartOf="@+id/reward_points" />
 
 
     <!--    scanqr rectangle-->
@@ -59,7 +61,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="264dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/reward_point_str"
+        android:text="0"
         android:textColor="@color/green_button"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/subtext"
@@ -368,4 +370,4 @@
     <!--    history subtext-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

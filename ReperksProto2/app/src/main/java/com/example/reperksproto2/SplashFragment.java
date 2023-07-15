@@ -20,7 +20,7 @@ public class SplashFragment extends Fragment {
         GetStartedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_splashFragment_to_loginFragment);
+                Navigation.findNavController(v).navigate(R.id.action_splashFragment_to_homeFragment);
             }
         });
 

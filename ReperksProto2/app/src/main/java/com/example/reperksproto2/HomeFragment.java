@@ -5,6 +5,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentResultListener;
 import androidx.navigation.Navigation;
 
 import android.util.Log;
@@ -38,6 +39,8 @@ public class HomeFragment extends Fragment {
     String userID;
     TextView RPtextView;
 
+    int arr[] = {0};
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,7 +51,6 @@ public class HomeFragment extends Fragment {
         imageButton2 = view.findViewById(R.id.rectangle_8);
         imageButton3 = view.findViewById(R.id.rectangle_9);
         imageButton4 = view.findViewById(R.id.rectangle_7);
-
         textView = view.findViewById(R.id.greeting_txt);
         RPtextView = view.findViewById(R.id.reward_points);
 
@@ -57,6 +59,14 @@ public class HomeFragment extends Fragment {
         userID =user.getUid();
 
         final TextView greetingTextView =(TextView) view.findViewById(R.id.greeting_txt);
+
+        getParentFragmentManager().setFragmentResultListener("datafrom2", this, new FragmentResultListener() {
+            @Override
+            public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                String rpp = result.getString("df2");
+                RPtextView.setText(rpp);
+            }
+        });
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -121,14 +131,21 @@ public class HomeFragment extends Fragment {
             builder.setPositiveButton("Click to Redeem", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+
+                    int n = arr.length;
+                    int oldi = arr[n-1];
 //                    String old = RPtextView.getText().toString();
-//                    String reS = (result.getContents());
-//                    int re = Integer.parseInt(reS);
+                    String reS = (result.getContents());
+                    int re = Integer.parseInt(reS);
 //                    int oldi =Integer.parseInt(old);
-//                    int newi = oldi + re;
-//                    String newS = Integer.toString(newi);
-//                    RPtextView.setText(newS);
-                    Navigation.findNavController(getView()).navigate(R.id.action_homeFragment_to_rewardFragment);
+                    int newi = oldi + re;
+                    arr[n-1]= newi;
+                    String newS = Integer.toString(newi);
+                    RPtextView.setText(newS);
+                    Bundle rp = new Bundle();
+                    rp.putString("df1",newS);
+                    getParentFragmentManager().setFragmentResult("datafrom1",rp);
+//                    Navigation.findNavController(getView()).navigate(R.id.action_homeFragment_to_rewardFragment);
 
                 }
             }).show();

@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/reward_point_str"
+        android:text="0"
         android:textColor="@color/green_button"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
