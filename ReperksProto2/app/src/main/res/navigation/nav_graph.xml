@@ -52,7 +52,15 @@
         <action
             android:id="@+id/action_homeFragment_to_rewardFragment"
             app:destination="@id/rewardFragment"
-            app:enterAnim="@anim/from_right" />
+            app:enterAnim="@anim/fade_in" />
+        <action
+            android:id="@+id/action_homeFragment_to_binSitesFragment"
+            app:destination="@id/binSitesFragment"
+            app:enterAnim="@anim/fade_in" />
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/rewardFragment"
@@ -64,4 +72,14 @@
             app:destination="@id/homeFragment"
             app:enterAnim="@anim/from_left" />
     </fragment>
+    <fragment
+        android:id="@+id/binSitesFragment"
+        android:name="com.example.reperksproto2.BinSitesFragment"
+        android:label="fragment_bin_sites"
+        tools:layout="@layout/fragment_bin_sites" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.reperksproto2.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

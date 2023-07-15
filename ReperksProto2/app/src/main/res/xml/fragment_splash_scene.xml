@@ -59,5 +59,8 @@
             motion:layout_constraintStart_toStartOf="parent"
             android:alpha="1"
             android:translationY="1dp" />
+        <Constraint
+            motion:layout_editor_absoluteY="16dp"
+            android:id="@+id/imageView" />
     </ConstraintSet>
 </MotionScene>

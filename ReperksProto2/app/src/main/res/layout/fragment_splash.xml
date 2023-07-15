@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/splash_background"
     app:layoutDescription="@xml/fragment_splash_scene"
     tools:context=".SplashFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/backgroundLayout"
+        android:elevation="1dp"
         android:layout_width="409dp"
         android:layout_height="373dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +19,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+
         <TextView
+            android:elevation="1dp"
             android:id="@+id/app_name"
             style="@style/Widget.MaterialComponents.Snackbar.TextView"
             android:layout_width="match_parent"
@@ -37,13 +41,14 @@
             app:layout_constraintVertical_bias="0.6" />
 
         <TextView
+            android:elevation="1dp"
             android:id="@+id/content"
             style="@style/Widget.MaterialComponents.Snackbar.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:maxLines="3"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna "
+            android:text=" "
             android:textAlignment="center"
             android:textColor="@color/sub_text"
             android:textSize="12sp"
@@ -58,6 +63,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
+        android:elevation="1dp"
         android:id="@+id/button1"
         android:layout_width="250dp"
         android:layout_height="60dp"
@@ -71,6 +77,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

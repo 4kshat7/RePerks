@@ -44,8 +44,8 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         imageButton1 = view.findViewById(R.id.rectangle_6);
         imageButton2 = view.findViewById(R.id.rectangle_8);
-        imageButton3 = view.findViewById(R.id.rectangle_7);
-        imageButton4 = view.findViewById(R.id.rectangle_9);
+        imageButton3 = view.findViewById(R.id.rectangle_9);
+        imageButton4 = view.findViewById(R.id.rectangle_7);
 
         textView = view.findViewById(R.id.greeting_txt);
 
@@ -81,6 +81,21 @@ public class HomeFragment extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_rewardFragment);
             }
         });
+
+        imageButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_binSitesFragment);
+            }
+        });
+
+        imageButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_homeFragment_to_historyFragment);
+            }
+        });
+
         return view;
     }
 
