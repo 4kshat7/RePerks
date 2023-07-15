@@ -41,24 +41,24 @@
             app:layout_constraintVertical_bias="0.6" />
 
         <TextView
-            android:elevation="1dp"
             android:id="@+id/content"
             style="@style/Widget.MaterialComponents.Snackbar.TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
+            android:layout_width="270dp"
+            android:layout_height="80dp"
+            android:elevation="1dp"
+            android:fontFamily="@font/poppins_semibold"
             android:maxLines="3"
-            android:text=" "
+            android:text="@string/turn_trash_into_"
             android:textAlignment="center"
             android:textColor="@color/sub_text"
             android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/app_name"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.219" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

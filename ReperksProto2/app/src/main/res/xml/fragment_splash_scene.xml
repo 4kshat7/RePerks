@@ -23,7 +23,8 @@
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             android:alpha="0.1"
-            android:translationY="500dp" />
+            android:translationY="500dp"
+            android:layout_marginStart="32dp" />
         <Constraint
             android:id="@+id/button1"
             motion:layout_constraintEnd_toEndOf="parent"
