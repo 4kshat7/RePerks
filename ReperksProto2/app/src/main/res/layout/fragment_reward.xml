@@ -53,7 +53,8 @@
         android:layout_marginBottom="4dp"
         android:background="@drawable/rp"
         app:layout_constraintBottom_toBottomOf="@+id/reward_points"
-        app:layout_constraintEnd_toStartOf="@+id/reward_points" />
+        app:layout_constraintEnd_toStartOf="@+id/reward_points"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/reward_points"
@@ -99,19 +100,33 @@
 
             </ImageView>
 
-            <TextView
-                android:layout_width="296dp"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/amazonlogo"
+                android:layout_width="129dp"
+                android:layout_height="38dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="50dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/amazon_gift_card"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="220dp"
+                android:background="@drawable/amazon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="296dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amazonlogo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="42dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/_500_rs_gift_card"
                 android:textColor="#F6F6F6"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 tools:ignore="TextContrastCheck" />
         </RelativeLayout>
 
@@ -149,20 +164,15 @@
 
             </ImageView>
 
-            <TextView
-                android:layout_width="297dp"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="50dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/quine_membership"
-                android:textColor="#F6F6F6"
-                android:textSize="20sp"
-                tools:ignore="TextContrastCheck" />
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/quine"
+                tools:ignore="ContentDescription" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -198,20 +208,15 @@
 
             </ImageView>
 
-            <TextView
-                android:layout_width="297dp"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:layout_width="117dp"
+                android:layout_height="51dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="50dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="Flipkart Gift Card"
-                android:textColor="#F6F6F6"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText,TextContrastCheck" />
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/fiveire"
+                tools:ignore="ContentDescription" />
 
 
         </RelativeLayout>
