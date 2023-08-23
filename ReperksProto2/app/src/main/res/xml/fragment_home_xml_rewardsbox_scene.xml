@@ -54,4 +54,20 @@
         motion:constraintSetEnd="@+id/end"
         motion:autoTransition="animateToEnd"
         motion:duration="500"/>
+    <ConstraintSet android:id="@+id/final" >
+        <Constraint
+            android:id="@+id/reward_image"
+            android:elevation="1dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:rotation="45" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/final"
+        motion:autoTransition="animateToEnd" />
 </MotionScene>
